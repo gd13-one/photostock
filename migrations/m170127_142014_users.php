@@ -12,9 +12,10 @@ class m170127_142014_users extends Migration
                 'id' => $this->primaryKey(),
                 'username' => $this->string(32)->notNull(),
                 'password' => $this->text()->notNull(),
-                'firstname' => $this->string(64)->notNull(),
-                'lastname' => $this->string(128)->notNull(),
+                'firstname' => $this->string(64),
+                'lastname' => $this->string(128),
                 'role' => $this->smallInteger(),
+                'auth_key' => $this->text(),
                 'create_dt' => $this->timestamp()->notNull(),
                 'update_dt' => $this->timestamp()
             ));
